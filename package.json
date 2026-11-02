@@ -1,0 +1,31 @@
+{
+  "name": "gear-garden",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Gear Garden — a 2.5D clockwork logic puzzle for Little Joy Arcade.",
+  "author": "jd4rider",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "bake": "tsx scripts/bake-levels.ts",
+    "validate": "tsx scripts/validate-levels.ts",
+    "bake:levels": "tsx scripts/bake-levels.ts",
+    "e2e": "playwright test"
+  },
+  "dependencies": {
+    "pixi.js": "^8.22.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.56.0",
+    "@types/node": "^26.6.6",
+    "tsx": "^4.20.0",
+    "typescript": "^5.9.2",
+    "vite": "^6.3.5",
+    "vitest": "^3.2.4"
+  }
+}

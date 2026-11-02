@@ -1,0 +1,210 @@
+import { WORLD_COUNT, WORLD_SIZE, type World } from '../core/types'
+
+const palette = (
+  background: string,
+  backgroundAccent: string,
+  board: string,
+  boardDark: string,
+  rim: string,
+  accent: string,
+  foliage: string,
+  flower: string,
+  sky: string,
+): World['palette'] => ({ background, backgroundAccent, board, boardDark, rim, accent, foliage, flower, sky })
+
+export const WORLDS: World[] = [
+  {
+    id: 1,
+    name: 'Seedling Springs',
+    tagline: 'Wake the first little waterwheel.',
+    teaches: 'Place gears and connect the motor',
+    start: 1,
+    end: 50,
+    palette: palette('#cfe8c9', '#9ed09a', '#e9d8b6', '#c8b28a', '#8a6a3f', '#5da65a', '#74bf68', '#f4a7c0', '#e5f4f1'),
+  },
+  {
+    id: 2,
+    name: 'Turning Tulips',
+    tagline: 'Every gear passes the turn the other way.',
+    teaches: 'Rotation direction',
+    start: 51,
+    end: 100,
+    palette: palette('#f7d9df', '#f2a7b8', '#f5e6cf', '#d8c1a2', '#96604a', '#d9557a', '#82b866', '#ff8fb0', '#fdeaf0'),
+  },
+  {
+    id: 3,
+    name: 'Sunflower Workshop',
+    tagline: 'Big wheel, small wheel, different speeds.',
+    teaches: 'Gear sizes and speed ratios',
+    start: 101,
+    end: 150,
+    palette: palette('#f8e6ae', '#efc968', '#e8d6b0', '#c5ac82', '#8d6a32', '#e0a020', '#7cae4a', '#ffd35c', '#fff3cd'),
+  },
+  {
+    id: 4,
+    name: 'Butterfly Meadow',
+    tagline: 'One motor, many wings.',
+    teaches: 'Multiple outputs',
+    start: 151,
+    end: 200,
+    palette: palette('#d8ecf7', '#a9d3ea', '#e6dfc8', '#c3b898', '#7c7250', '#5f9fc4', '#7cc178', '#c79ae8', '#eef7fc'),
+  },
+  {
+    id: 5,
+    name: 'Wooden Windmills',
+    tagline: 'A short tray of gears, so choose carefully.',
+    teaches: 'Fixed axles and limited inventory',
+    start: 201,
+    end: 250,
+    palette: palette('#e8dcc8', '#cdb894', '#dcc7a2', '#b59a75', '#77573a', '#a9713f', '#6f9f5a', '#e2b46a', '#f2ead9'),
+  },
+  {
+    id: 6,
+    name: 'Copper Creek',
+    tagline: 'Belts carry the turn across the water.',
+    teaches: 'Belts and pulleys',
+    start: 251,
+    end: 300,
+    palette: palette('#cfe3dd', '#93c3b8', '#e3cfae', '#c1a985', '#7c5d44', '#b06f3c', '#5fa98a', '#e79fb2', '#e8f4f0'),
+  },
+  {
+    id: 7,
+    name: 'Clockwork Orchard',
+    tagline: 'Two storeys of gears on one axle.',
+    teaches: 'Compound gears',
+    start: 301,
+    end: 350,
+    palette: palette('#dbe7c6', '#b2cd94', '#e4d3b1', '#c2ad87', '#7c6238', '#8a9c3e', '#6fae5c', '#f0c657', '#f0f6e4'),
+  },
+  {
+    id: 8,
+    name: 'Rosewood Factory',
+    tagline: 'Engage the clutch and the line comes alive.',
+    teaches: 'Clutches and switches',
+    start: 351,
+    end: 400,
+    palette: palette('#e7d2d0', '#c69d9a', '#dcc3a6', '#b99c80', '#7d5a45', '#a4524c', '#748f5c', '#e595a0', '#f4e9e7'),
+  },
+  {
+    id: 9,
+    name: 'Crystal Conservatory',
+    tagline: 'Branching glass and polished brass.',
+    teaches: 'Complex transmission networks',
+    start: 401,
+    end: 450,
+    palette: palette('#d9e8ef', '#a8cad9', '#e7dcc4', '#c6b99c', '#6f7f82', '#5d93a8', '#6fae8b', '#9fd0e8', '#eef8fb'),
+  },
+  {
+    id: 10,
+    name: 'Moonflower Garden',
+    tagline: 'Some blooms only open turning the other way.',
+    teaches: 'Advanced direction constraints',
+    start: 451,
+    end: 500,
+    palette: palette('#c8cfe0', '#8e9bc2', '#d9d3c4', '#b8b0a0', '#5d5a74', '#6f79b8', '#6f9b83', '#d7c7f1', '#e6ebf7'),
+  },
+  {
+    id: 11,
+    name: 'Gearling Grove',
+    tagline: 'One tray, several mouths to feed.',
+    teaches: 'Multi-output optimisation',
+    start: 501,
+    end: 550,
+    palette: palette('#d7e6cf', '#a5c795', '#e3d4b3', '#c2b18e', '#796242', '#7f9c4a', '#6cae63', '#f1b563', '#eef6e6'),
+  },
+  {
+    id: 12,
+    name: 'Golden Greenhouse',
+    tagline: 'Beautiful machines still need muscle.',
+    teaches: 'Mechanical load and torque',
+    start: 551,
+    end: 600,
+    palette: palette('#f5e4b8', '#e3c477', '#e9d5ad', '#c9b183', '#8b6a37', '#c79a2c', '#7aa85e', '#f0bf55', '#fdf2d6'),
+  },
+  {
+    id: 13,
+    name: 'Waterwheel Valley',
+    tagline: 'Speed and strength in the same stream.',
+    teaches: 'Speed and load combinations',
+    start: 601,
+    end: 650,
+    palette: palette('#cfe6e2', '#8fc4bd', '#ded0b5', '#bcaa8a', '#6f6350', '#4f9f9a', '#63a877', '#efb0a3', '#e9f6f4'),
+  },
+  {
+    id: 14,
+    name: 'Mechanical Menagerie',
+    tagline: 'Two motors, and they must never meet.',
+    teaches: 'Multiple motors',
+    start: 651,
+    end: 700,
+    palette: palette('#f2e0c9', '#d9b795', '#e6d2b2', '#c3ad8b', '#7c5a3e', '#c07a4a', '#76a361', '#e79a6c', '#fbf0e3'),
+  },
+  {
+    id: 15,
+    name: 'Starlight Springs',
+    tagline: 'Two blossoms opening in perfect time.',
+    teaches: 'Synchronisation and phase',
+    start: 701,
+    end: 750,
+    palette: palette('#c9d3e8', '#8fa2c9', '#d8d4c7', '#b4b0a2', '#585c78', '#6c82c0', '#6f9a8b', '#e8d9a5', '#e9eef9'),
+  },
+  {
+    id: 16,
+    name: 'Brass Blossom Palace',
+    tagline: 'Power will only travel one way.',
+    teaches: 'Gearboxes and one-way clutches',
+    start: 751,
+    end: 800,
+    palette: palette('#efdfc4', '#d2b483', '#e4cfa4', '#c1a97c', '#805d33', '#b8862f', '#7d9c58', '#e4b761', '#f8eed8'),
+  },
+  {
+    id: 17,
+    name: 'The Grand Arboretum',
+    tagline: 'Mind the braked axles in the long glass hall.',
+    teaches: 'Complex routing and restrictions',
+    start: 801,
+    end: 850,
+    palette: palette('#d6e6d9', '#a3c7ab', '#e2d7bd', '#c0b49a', '#6d6a4d', '#5b9270', '#5ba36c', '#e9b6c6', '#eef7ef'),
+  },
+  {
+    id: 18,
+    name: 'Infinity Clockworks',
+    tagline: 'Loops within loops, never quite settling.',
+    teaches: 'Advanced multi-system puzzles',
+    start: 851,
+    end: 900,
+    palette: palette('#d3d2e3', '#a29fc4', '#dfd9c9', '#bcb5a2', '#605c78', '#7472b0', '#6b9b84', '#bca9e6', '#ecebf7'),
+  },
+  {
+    id: 19,
+    name: "Master Mechanic's Garden",
+    tagline: 'Everything you have learned, all at once.',
+    teaches: 'Expert combinations',
+    start: 901,
+    end: 950,
+    palette: palette('#e6dcc4', '#c8b492', '#ddcaa6', '#b9a37f', '#735838', '#9a7334', '#6e9a5e', '#d9a26a', '#f4ecdc'),
+  },
+  {
+    id: 20,
+    name: 'Eternal Bloom',
+    tagline: 'The garden that never stops turning.',
+    teaches: 'Grand mastery challenges',
+    start: 951,
+    end: 1000,
+    palette: palette('#f3e3c8', '#dbc189', '#ecd9b4', '#cbb489', '#8a6534', '#c3903a', '#77a95c', '#f2b566', '#fff5e2'),
+  },
+]
+
+export function worldOf(globalLevel: number): World {
+  const clamped = Math.min(WORLD_COUNT * WORLD_SIZE, Math.max(1, globalLevel))
+  return WORLDS[Math.floor((clamped - 1) / WORLD_SIZE)] ?? WORLDS[0]!
+}
+
+export function themeFor(world: number): World['palette'] {
+  return (WORLDS[world - 1] ?? WORLDS[0]!).palette
+}
+
+/** Lookup by world id (1..20), as stored on a level. */
+export function worldById(world: number): World {
+  return WORLDS[Math.min(WORLDS.length, Math.max(1, world)) - 1] ?? WORLDS[0]!
+}

@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"
+    />
+    <meta
+      name="description"
+      content="Gear Garden — a cozy 2.5D clockwork logic puzzle. Place brass gears, connect the motor and wake a thousand miniature gardens. Play free in your browser."
+    />
+    <meta name="theme-color" content="#1d2a1f" />
+    <meta property="og:title" content="Gear Garden" />
+    <meta property="og:description" content="A beautiful 2.5D clockwork logic puzzle from Little Joy Arcade." />
+    <meta property="og:type" content="website" />
+    <title>Gear Garden — Little Joy Arcade</title>
+    <style>
+      html,
+      body {
+        margin: 0;
+        height: 100%;
+        overflow: hidden;
+        background: #16211a;
+        touch-action: none;
+        -webkit-tap-highlight-color: transparent;
+        overscroll-behavior: none;
+        font-family: 'Trebuchet MS', 'Segoe UI', system-ui, -apple-system, sans-serif;
+      }
+      #game {
+        position: fixed;
+        inset: 0;
+      }
+      #game canvas {
+        display: block;
+        width: 100%;
+        height: 100%;
+        touch-action: none;
+      }
+      .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        clip: rect(0 0 0 0);
+        white-space: nowrap;
+        border: 0;
+        padding: 0;
+        margin: -1px;
+      }
+    </style>
+  </head>
+  <body>
+    <main id="game" role="application" aria-label="Gear Garden puzzle board"></main>
+    <p id="game-status" class="sr-only" aria-live="polite"></p>
+    <noscript>Gear Garden needs JavaScript enabled.</noscript>
+    <script type="module" src="/src/main.ts"></script>
+    <script src="./arcade-client.js" data-game-id="gear-garden"></script>
+  </body>
+</html>

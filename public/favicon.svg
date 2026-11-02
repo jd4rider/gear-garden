@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Gear Garden">
+  <rect width="64" height="64" rx="14" fill="#1d2a1f" />
+  <g fill="#e9b45c">
+    <circle cx="32" cy="32" r="14" />
+    <g>
+      <rect x="29" y="6" width="6" height="9" rx="2" />
+      <rect x="29" y="49" width="6" height="9" rx="2" />
+      <rect x="6" y="29" width="9" height="6" rx="2" />
+      <rect x="49" y="29" width="9" height="6" rx="2" />
+      <rect x="13" y="13" width="6" height="9" rx="2" transform="rotate(-45 16 17.5)" />
+      <rect x="45" y="42" width="6" height="9" rx="2" transform="rotate(-45 48 46.5)" />
+      <rect x="45" y="13" width="6" height="9" rx="2" transform="rotate(45 48 17.5)" />
+      <rect x="13" y="42" width="6" height="9" rx="2" transform="rotate(45 16 46.5)" />
+    </g>
+  </g>
+  <circle cx="32" cy="32" r="7" fill="#3c2a18" />
+  <circle cx="32" cy="32" r="3.4" fill="#f6d99e" />
+</svg>
