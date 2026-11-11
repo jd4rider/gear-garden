@@ -1,4 +1,5 @@
 import { Container, Graphics } from 'pixi.js'
+import { openTipJar } from '../platform/support'
 import { registerScreen, type GameMode, type Screen, type ScreenContext, type ScreenParams } from '../app/types'
 import { dailyLevel, endlessLevel, todayKey } from '../app/daily'
 import { applyAction, commit, createHistory, isSlot, redo, remainingStock, undo, type History } from '../core/state'
@@ -610,6 +611,11 @@ export class GameplayScreen implements Screen {
         if (this.mode === 'journey') this.ctx.app.navigate('levels', { world: this.level.world })
         else this.ctx.app.navigate('menu')
       },
+    })
+    buttons.push({
+      text: '☕ Buy me a coffee',
+      variant: 'soft' as const,
+      onTap: () => openTipJar(),
     })
     const resultTitle =
       this.mode === 'journey'
